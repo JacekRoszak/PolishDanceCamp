@@ -13,3 +13,40 @@
  *= require_tree .
  *= require_self
  */
+
+ body{
+   background-color: rgb(46, 46, 46);
+   color: rgb(240, 240, 240);
+   font-family: 'Open Sans', sans-serif;
+ }
+
+ .btn{
+   margin: 5px !important;
+ }
+
+ .poster{
+   max-width: 95%;
+ }
+
+ .text-container{
+   max-width: 800px;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ h6,h5,h4 {
+  line-height: 1.3;
+
+ }
+
+ .fit-box{
+   width: fit-content !important;
+ }
+
+ .galery-item{
+   max-width: 90% !important;
+ }
+
+ .container{
+   max-width: 800px;
+ }

@@ -1,0 +1,186 @@
+.text-center
+  = image_tag  "luty.jpg", class: 'poster mb-3 mt-2'
+  .text-container.pb-4
+    = link_to 'Info',next_event_path(segment: 'info'), class: 'btn btn-danger'
+    = link_to 'Prezenterzy',next_event_path(segment: 'prezenterzy'), class: 'btn btn-danger'
+    = link_to 'Harmonogram',next_event_path(segment: 'harmonogram'), class: 'btn btn-danger'
+    = link_to 'Lokalizacja',next_event_path(segment: 'lokalizacja'), class: 'btn btn-danger'
+    = link_to 'Cena',next_event_path(segment: 'cena'), class: 'btn btn-danger'
+    = link_to 'Przelew',next_event_path(segment: 'przelew'), class: 'btn btn-danger'
+    
+    - if @segment.in?(['info',nil])
+      h2.text-danger.mt-3 Polish Dance Camp Red Edition 
+      h5 
+        | Tym razem nasze wydarzenie sportowe zorganizowane jest z okazji 
+        .d-inline-block.text-danger 
+          strong walentynek
+        | ! Czekają Was aż 3 dni niesamowitej zabawy!
+      h5 
+        | Impreza rozpocznie się 
+        .d-inline-block.text-danger 12 lutego 2021 
+        |  w piątek, a zakończy się 14 lutego w niedzielę.
+      h5 Zaprszamy do Koła na ulicę Szkolną 2b do Hali MOSIR Koło.
+    - if @segment == 'prezenterzy'
+      = render 'pages/presenters/lu'
+
+    - if @segment == 'harmonogram'
+      h2.m-3 Harmonogram imprezy:
+      h3 Befor MasterClass - więcej informacji wkrótce
+      h6.text-danger.mb-3 Piątek 20:15 - 21:45
+
+      h3 
+        | Warsztaty 
+        .d-inline-block.text-muted - więcej informacji wkrótce
+      h6.text-danger.mb-3 Sobota 12:00 - 13:30
+      h3 
+        | Masterclass 
+        .d-inline-block.text-muted - więcej informacji wkrótce
+      h6.text-danger.mb-3 Sobota 13:30 - 14:30
+      h3 
+        | Warsztaty 
+        .d-inline-block.text-muted - więcej informacji wkrótce
+      h6.text-danger.mb-3 Sobota 14:30 - 16:00
+      h3 Maraton: Męskie Zumbowanie
+      h6.text-danger.mb-3 Sobota 16:00 - 19:00
+      h3 
+        | Warsztaty 
+        .d-inline-block.text-muted - więcej informacji wkrótce
+      h6.text-danger.mb-3 Sobota 19:00 - 20:00
+
+      h3 
+        | Warsztaty 
+        .d-inline-block.text-muted - więcej informacji wkrótce
+      h6.text-danger.mb-3 Niedziela 11:00 - 12:30
+      h3 
+        | Warsztaty 
+        .d-inline-block.text-muted - więcej informacji wkrótce
+      h6.text-danger.mb-3 Niedziela 12:30 - 14:00
+      h3 
+        | Masterclass 
+        .d-inline-block.text-muted - więcej informacji wkrótce
+      h6.text-danger.mb-3 Niedziela 14:00 - 15:30
+
+
+    - if @segment == 'lokalizacja'
+      h4.mt-4 Koło 62-600
+      h4 ul. Szkolna 2b 
+      h4 Hala MOSIR Koło
+      = link_to 'MAPA', 'https://www.google.com/maps/place/Szkolna+2B,+62-600+Ko%C5%82o/@52.199357,18.6394293,17z/data=!3m1!4b1!4m5!3m4!1s0x471b158549fff687:0xb5c14302b480a9a0!8m2!3d52.199357!4d18.641618', class: 'btn btn-danger'
+
+    - if @segment == 'cena'
+      h3.mt-3 Koszt imprezy:
+      h6 
+        .text-danger.d-inline-block Befor
+        |  kosztuje 20 zł
+      h6 
+        .text-muted.d-inline-block  Opcja 1 -
+        .text-danger.d-inline-block Minimalna
+        |  - obejmuje sobotni maraton Męskie Zumbowanie, oraz jeden blok warsztatów
+      h6
+        .text-muted.d-inline-block  Opcja 2 -
+        .text-danger.d-inline-block Rozszerzona
+        |  - obejmuje całą sobotę bez afteru!
+      h6
+        .text-muted.d-inline-block  Opcja 3 -
+        .text-danger.d-inline-block Niedzielna
+        |  - obejmuje wszystko co będzie się działo w niedzielę.
+      h6 
+        .text-muted.d-inline-block  Opcja 4 -
+        .text-danger.d-inline-block Full
+        |  obejmuje całość imprezy od piątku do niedzieli z wyłączeniem Afteru!
+      h6 
+        .text-danger.d-inline-block After
+        |  jest płatny osobny 
+        .text-muted.d-inline-block - szczegóły wkrótce.
+
+      
+      p.text-muted.mt-3.mb-0
+        | ( do końca października )
+      h4 
+        .text-danger.d-inline-block Opcja 1:
+        |  Minimalna 
+        .text-danger.d-inline-block 34 zł
+      h4 
+        .text-danger.d-inline-block Opcja 2: 
+        |  Rozszerzona 
+        .text-danger.d-inline-block 74 zł
+      h4 
+        .text-danger.d-inline-block Opcja 3: 
+        |  Niedzielna 
+        .text-danger.d-inline-block 44 zł
+      h4 
+        .text-danger.d-inline-block Opcja 4: 
+        |  FULL 
+        .text-danger.d-inline-block 94 zł
+      
+      p.text-muted.mt-3.mb-0
+        | ( do końca listopada )
+      h4 
+        .text-danger.d-inline-block Opcja 1:
+        |  Minimalna 
+        .text-danger.d-inline-block 39 zł
+      h4 
+        .text-danger.d-inline-block Opcja 2: 
+        |  Rozszerzona 
+        .text-danger.d-inline-block 79 zł
+      h4 
+        .text-danger.d-inline-block Opcja 3: 
+        |  Niedzielna 
+        .text-danger.d-inline-block 49 zł
+      h4 
+        .text-danger.d-inline-block Opcja 4: 
+        |  FULL 
+        .text-danger.d-inline-block 99 zł
+      
+      p.text-muted.mt-3.mb-0
+        | ( do końca grudnia)
+      h4 
+        .text-danger.d-inline-block Opcja 1:
+        |  Minimalna 
+        .text-danger.d-inline-block 44 zł
+      h4 
+        .text-danger.d-inline-block Opcja 2: 
+        |  Rozszerzona 
+        .text-danger.d-inline-block 84 zł
+      h4 
+        .text-danger.d-inline-block Opcja 3: 
+        |  Niedzielna 
+        .text-danger.d-inline-block 54 zł
+      h4 
+        .text-danger.d-inline-block Opcja 4: 
+        |  FULL 
+        .text-danger.d-inline-block 104 zł
+
+      p.text-muted.mt-3.mb-0
+        | ( do końca stycznia)
+      h4 
+        .text-danger.d-inline-block Opcja 1:
+        |  Minimalna 
+        .text-danger.d-inline-block 49 zł
+      h4 
+        .text-danger.d-inline-block Opcja 2: 
+        |  Rozszerzona 
+        .text-danger.d-inline-block 89 zł
+      h4 
+        .text-danger.d-inline-block Opcja 3: 
+        |  Niedzielna 
+        .text-danger.d-inline-block 59 zł
+      h4 
+        .text-danger.d-inline-block Opcja 4: 
+        |  FULL 
+        .text-danger.d-inline-block 109 zł
+
+
+    - if @segment == 'przelew'
+      h4.mt-3 
+        .text-danger.d-inline-block Numer konta to: 
+        strong  88 1140 2004 0000 3902 4349 1237
+      h4 
+        .text-danger.d-inline-block Odbiorca to: 
+        |  Jacek Roszak
+      h4 
+        .text-danger.d-inline-block Tytuł: 
+        |  Imię, nazwisko i opcja
+
+
+
