@@ -1,12 +1,12 @@
 .text-center
   = image_tag  "luty.jpg", class: 'poster mb-3 mt-2'
   .text-container.pb-4
-    = link_to 'Info',next_event_path(segment: 'info'), class: 'btn btn-danger'
-    = link_to 'Prezenterzy',next_event_path(segment: 'prezenterzy'), class: 'btn btn-danger'
-    = link_to 'Harmonogram',next_event_path(segment: 'harmonogram'), class: 'btn btn-danger'
-    = link_to 'Lokalizacja',next_event_path(segment: 'lokalizacja'), class: 'btn btn-danger'
-    = link_to 'Cena',next_event_path(segment: 'cena'), class: 'btn btn-danger'
-    = link_to 'Przelew',next_event_path(segment: 'przelew'), class: 'btn btn-danger'
+    = link_to 'Info',red_edition_path(segment: 'info'), class: 'btn btn-danger'
+    = link_to 'Prezenterzy',red_edition_path(segment: 'prezenterzy'), class: 'btn btn-danger'
+    = link_to 'Harmonogram',red_edition_path(segment: 'harmonogram'), class: 'btn btn-danger'
+    = link_to 'Lokalizacja',red_edition_path(segment: 'lokalizacja'), class: 'btn btn-danger'
+    = link_to 'Cena',red_edition_path(segment: 'cena'), class: 'btn btn-danger'
+    = link_to 'Przelew',red_edition_path(segment: 'przelew'), class: 'btn btn-danger'
     
     - if @segment.in?(['info',nil])
       h2.text-danger.mt-3 Polish Dance Camp Red Edition 
@@ -21,14 +21,51 @@
         |  w piątek, a zakończy się 14 lutego w niedzielę.
       h5 Zaprszamy do Koła na ulicę Szkolną 2b do Hali MOSIR Koło.
     - if @segment == 'prezenterzy'
-      / = render 'pages/presenters/lu'
+      h4.mt-5
+        .text-danger.d-inline-block 1.
+        |  Łukasz Grabowski 
+        .text-danger.d-inline-block z Warszawy
+      h4.mt-2
+        .text-danger.d-inline-block 2.
+        |  ********* ********* 
+        .text-danger.d-inline-block 
+      h4.mt-2
+        .text-danger.d-inline-block 3.
+        |  ********* ********* 
+        .text-danger.d-inline-block 
+      h4.mt-2
+        .text-danger.d-inline-block 4.
+        |  ********* ********* 
+        .text-danger.d-inline-block 
+      h4.mt-2
+        .text-danger.d-inline-block 5.
+        |  ********* ********* 
+        .text-danger.d-inline-block 
+      h4.mt-2
+        .text-danger.d-inline-block 6.
+        |  ********* ********* 
+        .text-danger.d-inline-block 
+      h4.mt-2
+        .text-danger.d-inline-block 7.
+        |  ********* ********* 
+        .text-danger.d-inline-block 
+      h4.mt-2
+        .text-danger.d-inline-block 8.
+        |  ********* ********* 
+        .text-danger.d-inline-block 
+      h4.mt-2
+        .text-danger.d-inline-block 9.
+        |  Jacek Roszak 
+        .text-danger.d-inline-block ze Skulska
+
+
 
     - if @segment == 'harmonogram'
       h2.m-3 Harmonogram imprezy:
       h3 Befor MasterClass - więcej informacji wkrótce
       h6.text-danger.mb-3 Piątek 20:15 - 21:45
 
-      h3 
+      h3.mt-5
         | Warsztaty 
         .d-inline-block.text-muted - więcej informacji wkrótce
       h6.text-danger.mb-3 Sobota 12:00 - 13:30
@@ -47,7 +84,7 @@
         .d-inline-block.text-muted - więcej informacji wkrótce
       h6.text-danger.mb-3 Sobota 19:00 - 20:00
 
-      h3 
+      h3.mt-5
         | Warsztaty 
         .d-inline-block.text-muted - więcej informacji wkrótce
       h6.text-danger.mb-3 Niedziela 11:00 - 12:30

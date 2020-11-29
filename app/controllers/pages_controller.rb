@@ -9,7 +9,7 @@ class PagesController < ApplicationController
     Log.create(ip: request.remote_ip, action: 'LU mc')
   end
 
-  def next_event
+  def red_edition
     @segment = params[:segment]
     Log.create(ip: request.remote_ip, action: 'Red Edition')
   end

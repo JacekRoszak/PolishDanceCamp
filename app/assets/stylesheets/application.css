@@ -16,7 +16,7 @@
 
  body{
    background-color: rgb(26, 26, 26);
-   color: rgb(240, 240, 240);
+   color: rgb(215, 215, 215);
    font-family: 'Open Sans', sans-serif;
  }
 
@@ -55,3 +55,11 @@
    font-size: 70px !important;
    line-height: 1 !important;
  }
+
+ .btn{
+  color: white !important;
+  } 
+
+  .btn-warning{
+    color: black !important;
+  }
