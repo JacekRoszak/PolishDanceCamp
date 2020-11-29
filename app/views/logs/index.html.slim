@@ -20,5 +20,5 @@
     - @logs.pluck(:ip).uniq.each do |ip|
       h6
         = ip
-        | [ #{Geocoder.search(ip).first.city} ] 
+        | [ #{Geocoder.search(ip).first&.city} ] 
         = @logs.where(ip: ip).count
