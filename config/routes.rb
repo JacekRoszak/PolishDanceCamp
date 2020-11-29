@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :logs
   root 'pages#home'
   get 'galery', to: 'pages#galery'
   get 'regulations', to: 'pages#regulations'
