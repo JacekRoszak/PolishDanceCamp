@@ -4,7 +4,7 @@
     - @logs.reverse_each do |log|
       p
         = log.ip
-        |  
+        |  [#{Geocoder.search(log.ip).first&.city}]
         = log.action
 
   .d-inline-block.mx-4
@@ -15,10 +15,3 @@
     h6 LU mc: #{@logs.where(action: 'LU mc').count}
     h6 Galery: #{@logs.where(action: 'galery').count}
     h6 Regulamin: #{@logs.where(action: 'regulations').count}
-    
-  .d-inline-block.mx-4
-    - @logs.pluck(:ip).uniq.each do |ip|
-      h6
-        = ip
-        | [ #{Geocoder.search(ip).first&.city} ] 
-        = @logs.where(ip: ip).count
