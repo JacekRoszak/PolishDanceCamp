@@ -10,8 +10,8 @@
   .d-inline-block.mx-4
     h6 Ilość unikalnych ip: #{@logs.pluck(:ip).uniq.count}
     h6 Ilość wpisów loga: #{@logs.all.count}
-    h6 Red Edition: #{@logs.where(action: 'Red Edition').count}
-    h6 Home: #{@logs.where(action: 'home page').count}
-    h6 LU mc: #{@logs.where(action: 'LU mc').count}
-    h6 Galery: #{@logs.where(action: 'galery').count}
-    h6 Regulamin: #{@logs.where(action: 'regulations').count}
+    / h6 Red Edition: #{@logs.where(action: 'Red Edition').count}
+    / h6 Home: #{@logs.where(action: 'home page').count}
+    / h6 LU mc: #{@logs.where(action: 'LU mc').count}
+    / h6 Galery: #{@logs.where(action: 'galery').count}
+    / h6 Regulamin: #{@logs.where(action: 'regulations').count}
