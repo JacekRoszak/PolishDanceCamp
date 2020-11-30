@@ -4,7 +4,7 @@
     - @logs.reverse_each do |log|
       p
         = log.ip
-        |  [#{Geocoder.search(log.ip).first&.city}]
+        |  
         = log.action
 
   .d-inline-block.mx-4
