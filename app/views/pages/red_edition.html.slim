@@ -27,34 +27,34 @@
         .text-danger.d-inline-block z Warszawy
       h4.mt-2
         .text-danger.d-inline-block 2.
-        |  ********* ********* 
-        .text-danger.d-inline-block 
+        |  Krzysztof Nowak 
+        .text-danger.d-inline-block ze Swarzędza
       h4.mt-2
         .text-danger.d-inline-block 3.
-        |  ********* ********* 
-        .text-danger.d-inline-block 
+        |  Adam Możdżer 
+        .text-danger.d-inline-block z Łodzi
       h4.mt-2
         .text-danger.d-inline-block 4.
-        |  ********* ********* 
-        .text-danger.d-inline-block 
+        |  Paweł Milhausen 
+        .text-danger.d-inline-block z Bydgoszczy
       h4.mt-2
         .text-danger.d-inline-block 5.
-        |  ********* ********* 
-        .text-danger.d-inline-block 
+        |  Marek Ciećwierz 
+        .text-danger.d-inline-block z Torunia
       h4.mt-2
         .text-danger.d-inline-block 6.
-        |  ********* ********* 
-        .text-danger.d-inline-block 
+        |  Darek Kras 
+        .text-danger.d-inline-block z Katowic
       h4.mt-2
         .text-danger.d-inline-block 7.
         |  ********* ********* 
         .text-danger.d-inline-block 
+      / h4.mt-2
+      /   .text-danger.d-inline-block 8.
+      /   |  ********* ********* 
+      /   .text-danger.d-inline-block 
       h4.mt-2
         .text-danger.d-inline-block 8.
-        |  ********* ********* 
-        .text-danger.d-inline-block 
-      h4.mt-2
-        .text-danger.d-inline-block 9.
         |  Jacek Roszak 
         .text-danger.d-inline-block ze Skulska
 
@@ -62,40 +62,91 @@
 
     - if @segment == 'harmonogram'
       h2.m-3 Harmonogram imprezy:
-      h3 Befor MasterClass - więcej informacji wkrótce
-      h6.text-danger.mb-3 Piątek 20:15 - 21:45
+      table
+        thead
+          tr
+            th style='width: 140px;'
+            th style='width: 300px;'
+            th style='width: 140px;'
+        tbody
+          tr 
+            td
+              h6
+                .text-danger Piątek
+                .text-danger 20:15 - 21:45
+            td
+              h3 Befor MasterClass
+            td
+              h5
+                .d-inline-block.text-muted - Jacek Roszak
 
-      h3.mt-5
-        | Warsztaty 
-        .d-inline-block.text-muted - więcej informacji wkrótce
-      h6.text-danger.mb-3 Sobota 12:00 - 13:30
-      h3 
-        | Masterclass 
-        .d-inline-block.text-muted - więcej informacji wkrótce
-      h6.text-danger.mb-3 Sobota 13:30 - 14:30
-      h3 
-        | Warsztaty 
-        .d-inline-block.text-muted - więcej informacji wkrótce
-      h6.text-danger.mb-3 Sobota 14:30 - 16:00
-      h3 Maraton: Męskie Zumbowanie
-      h6.text-danger.mb-3 Sobota 16:00 - 19:00
-      h3 
-        | Warsztaty 
-        .d-inline-block.text-muted - więcej informacji wkrótce
-      h6.text-danger.mb-3 Sobota 19:00 - 20:00
+          tr style='background-color: rgb(30,30,30);'
+            td
+              h6.text-danger Sobota
+              h6.text-danger 12:00 - 13:30
+            td
+              h3
+                | Warsztaty 
+            td
+              h5
+                .d-inline-block.text-muted - Adam Możdżer
+          tr  
+            td
+              h6
+                .text-danger 13:30 - 14:30
+            td
+              h3 
+                | Masterclass 
+            td
+              h5
+                .d-inline-block.text-muted - Krzysztof Nowak
+                .d-inline-block.text-muted - Łukasz Grabowski
+          tr style='background-color: rgb(30,30,30);'
+            td
+              h6.text-danger 15:30 - 17:00
+            td
+              h3 
+                | Warsztaty 
+            td
+              h5.d-inline-block.text-muted - Łukasz Grabowski
 
-      h3.mt-5
-        | Warsztaty 
-        .d-inline-block.text-muted - więcej informacji wkrótce
-      h6.text-danger.mb-3 Niedziela 11:00 - 12:30
-      h3 
-        | Warsztaty 
-        .d-inline-block.text-muted - więcej informacji wkrótce
-      h6.text-danger.mb-3 Niedziela 12:30 - 14:00
-      h3 
-        | Masterclass 
-        .d-inline-block.text-muted - więcej informacji wkrótce
-      h6.text-danger.mb-3 Niedziela 14:00 - 15:30
+          tr
+            td
+              h6.text-danger 17:00 - 20:00
+            td
+              h3 Maraton: 
+              h3 Męskie Zumbowanie
+            td
+              h5.d-inline-block.text-muted - więcej informacji wkrótce
+
+          tr style='background-color: rgb(30,30,30);'
+            td
+              h6.text-danger Niedziela 
+              h6.text-danger 11:00 - 12:30
+            td
+              h3
+                | Warsztaty 
+            td
+              h5.d-inline-block.text-muted - Paweł Milhausen
+
+          tr
+            td
+              h6.text-danger 12:30 - 14:00
+            td
+              h3 
+                | Warsztaty 
+            td
+              h5.d-inline-block.text-muted - Darek Kras
+
+          tr style='background-color: rgb(30,30,30);'
+            td
+              h6.text-danger 14:00 - 15:30
+            td
+              h3 
+                | Masterclass 
+            td
+              h5.d-inline-block.text-muted - Paweł Milhausen
+              h5.d-inline-block.text-muted - Darek Kras
 
 
     - if @segment == 'lokalizacja'
